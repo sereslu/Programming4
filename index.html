@@ -555,13 +555,7 @@
         var data = new google.visualization.DataTable();
         data.addColumn('string', 'Feeling');
         data.addColumn('number', 'Degree of Feeling');
-        data.addRows([
-          ['Winter Wonderland', 1],
-          ['Adjustment', 2],
-          ['Annoyance', 3],
-          ['Anger', 4],
-          ['Despair', 5]
-        ]);
+        data.addRows(BigArray);
 
         // Set chart options
         var options = {'title':'Different Feelings About Winter',
