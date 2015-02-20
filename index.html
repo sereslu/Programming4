@@ -14,7 +14,7 @@
       // instantiates the pie chart, passes in the data and
       // draws it.
       
-      {
+    var jsonFREDdata = {
     "realtime_start": "2013-08-14",
     "realtime_end": "2013-08-14",
     "observation_start": "1776-07-04",
@@ -539,11 +539,14 @@
       var BigArray = [];
       
       for (var i=0;i<jsonFREDdata.observations.length; i++){
+      	
+      	var FRED = jsonFREDdata.observations[i]
+      	
       	//little list
       	
       	var SmallArray = [];
-      	SmallArray.push(jsonFREDdata.observations[i].date);
-      	SmallArray.push( Number ( jsonFREDdata.observations[i].value ) );	
+      	SmallArray.push(FRED.date);
+      	SmallArray.push( Number (FRED.value ) );	
       	
       	//add my little list to the big list (list = array)
       	BigArray.push(SmallArray);
